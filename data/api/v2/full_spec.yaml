@@ -7634,6 +7634,16 @@ components:
       properties:
         compute:
           $ref: '#/components/schemas/EventsCompute'
+        cross_org_uuids:
+          description: The source organization UUID for cross organization queries.
+          example:
+          - 6434abde-xxxx-yyyy-zzzz-da7ad0900001
+          items:
+            description: The source organization UUID.
+            example: 6434abde-xxxx-yyyy-zzzz-da7ad0900001
+            type: string
+          maxItems: 1
+          type: array
         data_source:
           $ref: '#/components/schemas/EventsDataSource'
         group_by:
@@ -13085,6 +13095,16 @@ components:
     MetricsTimeseriesQuery:
       description: An individual timeseries metrics query.
       properties:
+        cross_org_uuids:
+          description: The source organization UUID for cross organization queries.
+          example:
+          - 6434abde-xxxx-yyyy-zzzz-da7ad0900001
+          items:
+            description: The source organization UUID.
+            example: 6434abde-xxxx-yyyy-zzzz-da7ad0900001
+            type: string
+          maxItems: 1
+          type: array
         data_source:
           $ref: '#/components/schemas/MetricsDataSource'
         name:
